@@ -8,8 +8,8 @@
 
 /* See the license in the file "LICENSE.txt" in the root directory. */
 
-#include "version.hpp"
 #include <iostream>
+#include "version.hpp"
 
 
 /** @brief Main entry point */
