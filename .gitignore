@@ -24,6 +24,7 @@
 
 bin/
 build/
+3rdpaty/
 
 # CMake
 cmake-build-*/

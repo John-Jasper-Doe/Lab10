@@ -10,7 +10,7 @@ endfunction()
 
 ##
 function(addtest TESTNAME FIRSTSOURCE)
-  add_executable(${TESTNAME} ${FIRSTSOURCE} ${ARGN})
+  add_executable(${TESTNAME} main.cpp ${FIRSTSOURCE} ${ARGN})
   target_link_libraries(${TESTNAME} gtest)
   add_test(
     NAME ${TESTNAME}

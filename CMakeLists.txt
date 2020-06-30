@@ -37,6 +37,7 @@ find_package(Boost COMPONENTS program_options filesystem regex thread REQUIRED)
 # Setting options on project
 option(CLANG_FORMAT "Enable clang-format target" OFF)
 option(DOCUMENTATION "Build documentation" ON)
+option(TESTING "Build tests" ON)
 
 if(CLANG_FORMAT)
   include(clang-format)
@@ -45,6 +46,21 @@ endif()
 if(DOCUMENTATION)
   find_package(Doxygen COMPONENTS dot)
   include(doxygen)
+endif()
+
+# Settings for test cases.
+if (TESTING)
+  print("Target \"test\" enabled")
+  include(gtest)
+  # set GTEST_INCLUDE_DIR properly
+  set(GTEST_INCLUDE_DIR
+    ${CMAKE_SOURCE_DIR}/3rdpaty/gtest/src/googletest/include
+    CACHE PATH "path to gtest includes"
+  )
+  include(CTest)
+  include_directories(${GTEST_INCLUDE_DIR})
+  add_subdirectory(test)
+  enable_testing()
 endif()
 
 # Added source directory
