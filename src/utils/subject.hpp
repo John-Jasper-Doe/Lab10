@@ -27,7 +27,6 @@ namespace bulkmt {
 /** @brief The namespace of the Utils */
 namespace utils {
 
-
 /**
  * @brief Template class "Subject".
  * @tparam ARGS - template input parameters.
@@ -81,7 +80,6 @@ protected:
     }
   }
 };
-
 
 } /* utils:: */
 } /* bulkmt:: */
