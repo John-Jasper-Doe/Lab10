@@ -22,13 +22,14 @@ function(addtest TESTNAME FIRSTSOURCE)
     CXX_STANDARD_REQUIRED ON
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/test_bin
   )
-  add_custom_command(
-    TARGET ${TESTNAME}
-    POST_BUILD
-    COMMAND ${TESTNAME}
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-    COMMENT ">>> Running ${TESTNAME}" VERBATIM
-  )
+  # Test autoruns....
+#  add_custom_command(
+#    TARGET ${TESTNAME}
+#    POST_BUILD
+#    COMMAND ${TESTNAME}
+#    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+#    COMMENT ">>> Running ${TESTNAME}" VERBATIM
+#  )
 
   disable_clang_tidy(${TESTNAME})
 endfunction(addtest)
