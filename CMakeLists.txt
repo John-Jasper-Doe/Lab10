@@ -35,7 +35,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 find_package(Boost COMPONENTS program_options filesystem regex thread REQUIRED)
 
 # Setting options on project
-option(CLANG_FORMAT "Enable clang-format target" OFF)
+option(CLANG_FORMAT "Enable clang-format target" ON)
 option(DOCUMENTATION "Build documentation" ON)
 option(TESTING "Build tests" ON)
 

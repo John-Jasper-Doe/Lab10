@@ -2,4 +2,4 @@
 
 set(CMAKE_FOLDER "${CMAKE_FOLDER}/test")
 
-addtest("reader" reader.cpp)
+addtest("alltests" reader.cpp testcmdpool.cpp)
