@@ -1,6 +1,4 @@
 #include <gtest/gtest.h>
-#include <iostream>
-
 #include "common/cmdpool.hpp"
 
 TEST(test_cmd_pool, test_size) {
