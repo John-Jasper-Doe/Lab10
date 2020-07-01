@@ -1,10 +1,10 @@
 #include <gtest/gtest.h>
 #include <iostream>
 
-#include "cmd/cmdpool.hpp"
+#include "common/cmdpool.hpp"
 
 TEST(test_cmd_pool, test_size) {
-  bulkmt::cmd::cmd_pool pool;
+  bulkmt::common::cmd_pool pool;
   ASSERT_EQ(pool.size(), 0);
 
   pool.add("cmd1");
@@ -18,7 +18,7 @@ TEST(test_cmd_pool, test_size) {
 }
 
 TEST(test_cmd_pool, test_as_str) {
-  bulkmt::cmd::cmd_pool pool;
+  bulkmt::common::cmd_pool pool;
   pool.add("cmd1");
   pool.add("cmd2");
   pool.add("cmd3");

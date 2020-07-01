@@ -20,8 +20,8 @@
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {
-/** @brief The namespace of the Commands */
-namespace cmd {
+/** @brief The namespace of the Common */
+namespace common {
 
 /** @brief Alias of the commands pool of type. */
 using cmd_t = std::string;
@@ -73,7 +73,7 @@ public:
   void clear();
 };
 
-} /* cmd:: */
+} /* common:: */
 } /* bulkmt:: */
 
 #endif /* CMDPOOL_HPP_ */

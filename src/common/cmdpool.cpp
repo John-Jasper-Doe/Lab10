@@ -10,8 +10,8 @@
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {
-/** @brief The namespace of the Commands */
-namespace cmd {
+/** @brief The namespace of the Common */
+namespace common {
 
 void cmd_pool::add(const cmd_t&& cmd) {
   if (size() == 0)
@@ -45,5 +45,5 @@ void cmd_pool::clear() {
   pool_.clear();
 }
 
-} /* cmd:: */
+} /* common:: */
 } /* bulkmt:: */
