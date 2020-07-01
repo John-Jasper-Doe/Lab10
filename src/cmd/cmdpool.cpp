@@ -30,7 +30,6 @@ first_cmd_time_t cmd_pool::first_cmd_time() const {
 
 std::string cmd_pool::as_str() const {
   std::stringstream ss;
-
   for (auto cit = pool_.cbegin(); cit != pool_.cend(); ++cit) {
     if (cit != pool_.begin())
       ss << ", ";
