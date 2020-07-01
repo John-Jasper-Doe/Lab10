@@ -24,7 +24,8 @@ namespace io {
 
 /** @brief The reader class */
 class reader final : public io::ireader {
-  std::istream& istrm_;  /**< - the input stream. */
+  /** @brief The input stream. */
+  std::istream& istrm_;
 
 public:
   /**

@@ -2,7 +2,7 @@
  * @file obsorver.hpp
  *
  * @brief Discription of the template class "Observer".
- * 
+ *
  * @details
  * The base class of the "Observer" object template. It provides basic
  * functionality to all inherited objects. All observers must inherit from it.
@@ -23,7 +23,7 @@ namespace utils {
  * @brief Template class "Observer".
  * @tparam ARGS - template input parameters.
  */
-template<typename ...ARGS>
+template <typename... ARGS>
 class observer {
 public:
   /** @brief The default constructor */
@@ -33,7 +33,7 @@ public:
   virtual ~observer() = default;
 
   /** @brief update all observer */
-  virtual void update(const ARGS &...) = 0;
+  virtual void update(const ARGS&...) = 0;
 };
 
 } /* utils:: */
