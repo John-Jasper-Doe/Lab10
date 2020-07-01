@@ -30,11 +30,7 @@ using cmd_pool_t = std::vector<cmd_t>;
 /** @brief Alias of the time of the first command added to the pool. */
 using first_cmd_time_t = std::chrono::time_point<std::chrono::system_clock>;
 
-/**
- * @brief The template class "cmd_pool".
- * @tparam SIZE - size data in pool (default = 5)
- */
-template <std::size_t SIZE = 5>
+/** @brief The "cmd_pool" class. */
 class cmd_pool final {
   /** @brief The pool of the commands. */
   std::vector<std::string> pool_{};
@@ -53,50 +49,28 @@ public:
    * @brief Adding a command to the pool.
    * @param command [in] - the command.
    */
-  void add(const cmd_t&& cmd) {
-    if (size() == 0)
-      first_cmd_time_ = std::chrono::system_clock::now();
-
-    pool_.emplace_back(std::move(cmd));
-  }
+  void add(const cmd_t&& cmd);
 
   /**
    * @brief Number of the commands in the pool.
    * @return Pool size.
    */
-  std::size_t size() const {
-    return pool_.size();
-  }
+  std::size_t size() const;
 
   /**
    * @brief Gte first command time.
    * @return First command time.
    */
-  first_cmd_time_t first_cmd_time() const {
-    return first_cmd_time_;
-  }
+  first_cmd_time_t first_cmd_time() const;
 
   /**
    * @brief Get the pool of the commands as string.
    * @return String of the commands.
    */
-  const std::string as_str() const {
-    std::stringstream ss;
-
-    for (auto cit = pool_.cbegin(); cit != pool_.cend(); ++cit) {
-      if (cit != pool_.begin())
-        ss << ", ";
-
-      ss << (*cit);
-    }
-
-    return ss.str();
-  }
+  std::string as_str() const;
 
   /** @brief Clear the pool. */
-  void clear() {
-    pool_.clear();
-  }
+  void clear();
 };
 
 } /* cmd:: */

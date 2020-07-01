@@ -2,4 +2,8 @@
 
 set(CMAKE_FOLDER "${CMAKE_FOLDER}/test")
 
-addtest("alltests" reader.cpp testcmdpool.cpp)
+set(PROJECT_SRC
+  ${CMAKE_SOURCE_DIR}/src/cmd/cmdpool.cpp
+)
+
+addtest("alltests" reader.cpp testcmdpool.cpp ${PROJECT_SRC})
