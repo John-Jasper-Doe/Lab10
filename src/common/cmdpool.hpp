@@ -26,14 +26,14 @@ namespace common {
 /** @brief Alias of the commands pool of type. */
 using cmd_t = std::string;
 /** @brief Alias of the commands pool of type. */
-using cmd_pool_t = std::vector<cmd_t>;
+using pool_t = std::vector<cmd_t>;
 /** @brief Alias of the time of the first command added to the pool. */
 using first_cmd_time_t = std::chrono::time_point<std::chrono::system_clock>;
 
 /** @brief The "cmd_pool" class. */
 class cmd_pool final {
   /** @brief The pool of the commands. */
-  std::vector<std::string> pool_{};
+  pool_t pool_{};
 
   /** @brief The first command time. */
   first_cmd_time_t first_cmd_time_{};
