@@ -1,6 +1,6 @@
 /**
- * @file cmdpool.hpp
- * @brief Discription of the class "cmd_pool".
+ * @file cmdpool.cpp
+ * @brief Implementation of the class "cmd_pool".
  *
  * @author Maxim <john.jasper.doe@gmail.com>
  * @date 2020
