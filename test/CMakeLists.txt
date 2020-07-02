@@ -8,8 +8,9 @@ set(PROJECT_SRC
 )
 
 addtest("alltests"
-  reader.cpp
+#  reader.cpp
   testcmdpool.cpp
   testcounter.cpp
+  testtsqueue.cpp
   ${PROJECT_SRC}
 )
