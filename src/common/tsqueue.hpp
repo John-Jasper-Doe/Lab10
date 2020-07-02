@@ -17,12 +17,8 @@
 #ifndef TSQUEUE_HPP_
 #define TSQUEUE_HPP_
 
-#pragma once
-
 #include <condition_variable>
 #include <mutex>
-#include <queue>
-#include <variant>
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {
@@ -66,8 +62,8 @@ class tsqueue final {
 public:
   tsqueue() : head_(new detail::node<T>), tail_(head_.get()) {}
 
-  //  tsqueue(const tsqueue& other) = delete;
-  //  tsqueue& operator=(const tsqueue& other) = delete;
+  tsqueue(const tsqueue& other) = delete;
+  tsqueue& operator=(const tsqueue& other) = delete;
 
   /**
    * @brief Adding new values.
