@@ -19,7 +19,6 @@ namespace io {
 
 /** @brief The "ILogger" class */
 class ilogger {
-
 public:
   ilogger() = default;
   virtual ~ilogger() = default;
