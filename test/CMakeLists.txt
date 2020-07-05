@@ -12,5 +12,6 @@ addtest("alltests"
   testcmdpool.cpp
   testcounter.cpp
   testtsqueue.cpp
+  testtaskpool.cpp
   ${PROJECT_SRC}
 )
