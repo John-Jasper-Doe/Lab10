@@ -169,7 +169,7 @@ protected:
 
   std::unique_ptr<detail::node<T>> try_pop_head(T& value) {
     std::lock_guard<std::mutex> head_lock(mtx_head_);
-    if (head_.get() == tail())
+    if (head_.get() == tail() || head_ == nullptr)
       return std::unique_ptr<detail::node<T>>();
 
     value = std::move(*head_->data);
