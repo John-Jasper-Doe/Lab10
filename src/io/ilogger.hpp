@@ -14,6 +14,12 @@
 
 /** @brief The namespace of the BULKMT project */
 namespace bulkmt {
+
+/** @brief The namespace of the Common */
+namespace common {
+class counter;
+} /* common:: */
+
 /** @brief The namespace of the IO */
 namespace io {
 
@@ -29,7 +35,7 @@ public:
   ilogger& operator=(const ilogger&) = delete;
   ilogger& operator=(ilogger&&) = delete;
 
-  virtual void start() = 0;
+  virtual common::counter start() noexcept = 0;
 };
 
 } /* io:: */
