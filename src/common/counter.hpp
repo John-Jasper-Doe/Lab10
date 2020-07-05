@@ -57,7 +57,26 @@ public:
    * @return The result is a line of text.
    */
   std::string as_str(bool allow_strings_cnt = false) noexcept;
+
+  friend counter& operator+=(counter& lhs, const counter& rhs);
+  friend counter& operator-=(counter& lhs, const counter& rhs);
 };
+
+inline counter& operator+=(counter& lhs, const counter& rhs) {
+  lhs.str_ += rhs.str_;
+  lhs.cmd_ += rhs.cmd_;
+  lhs.blk_ += rhs.blk_;
+
+  return lhs;
+}
+
+inline counter& operator-=(counter& lhs, const counter& rhs) {
+  lhs.str_ -= rhs.str_;
+  lhs.cmd_ -= rhs.cmd_;
+  lhs.blk_ -= rhs.blk_;
+
+  return lhs;
+}
 
 } /* common:: */
 } /* bulkmt:: */
