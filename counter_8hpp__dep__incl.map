@@ -1,0 +1,11 @@
+<map id="src/common/counter.hpp" name="src/common/counter.hpp">
+<area shape="rect" id="node2" href="$controller_8hpp.html" title="Discription of the class &quot;Controller&quot;. " alt="" coords="149,155,313,181"/>
+<area shape="rect" id="node4" href="$controller_8cpp.html" title="The implementation of the class &quot;Controller&quot;. " alt="" coords="431,229,594,256"/>
+<area shape="rect" id="node5" href="$counter_8cpp.html" title="Implementation of the class &quot;counter&quot;. " alt="" coords="269,80,450,107"/>
+<area shape="rect" id="node6" href="$taskpool_8hpp.html" title="Task pool implementation. " alt="" coords="5,80,193,107"/>
+<area shape="rect" id="node7" href="$conlogger_8hpp.html" title="Discription of the &quot;Console Logger&quot; class. " alt="" coords="525,80,676,107"/>
+<area shape="rect" id="node9" href="$filelogger_8hpp.html" title="Discription of the &quot;File Logger&quot; class. " alt="" coords="700,80,845,107"/>
+<area shape="rect" id="node3" href="$bulkmt_8cpp.html" title="Main file in this project. " alt="" coords="173,229,289,256"/>
+<area shape="rect" id="node8" href="$conlogger_8cpp.html" title="Implementation of the &quot;Console Logger&quot; class. " alt="" coords="575,155,725,181"/>
+<area shape="rect" id="node10" href="$filelogger_8cpp.html" title="Implementation of the &quot;File Logger&quot; class. " alt="" coords="799,155,943,181"/>
+</map>

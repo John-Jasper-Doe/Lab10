@@ -1,0 +1,19 @@
+<map id="bulkmt::core::controller" name="bulkmt::core::controller">
+<area shape="rect" id="node2" href="$classbulkmt_1_1utils_1_1observer.html" title="bulkmt::utils::observer\l\&lt; std::string \&gt;" alt="" coords="1281,5,1445,47"/>
+<area shape="rect" id="node5" href="$classbulkmt_1_1common_1_1cmd__pool.html" title="The &quot;cmd_pool&quot; class. " alt="" coords="899,102,1100,129"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="316,153,403,179"/>
+<area shape="rect" id="node9" href="$classbulkmt_1_1common_1_1taskpool.html" title="bulkmt::common::taskpool\&lt; 4 \&gt;" alt="" coords="1248,295,1479,322"/>
+<area shape="rect" id="node25" href="$classbulkmt_1_1common_1_1taskpool.html" title="bulkmt::common::taskpool\&lt; 1 \&gt;" alt="" coords="1248,406,1479,433"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="29,145,167,187"/>
+<area shape="rect" id="node10" href="$classbulkmt_1_1common_1_1tsqueue.html" title="bulkmt::common::tsqueue\l\&lt; task_t * \&gt;" alt="" coords="904,499,1095,540"/>
+<area shape="rect" id="node11" href="$structbulkmt_1_1common_1_1detail_1_1node.html" title="bulkmt::common::detail\l::node\&lt; task_t * \&gt;" alt="" coords="272,537,447,579"/>
+<area shape="rect" id="node13" href="$structbulkmt_1_1common_1_1detail_1_1node.html" title="Representation of a queue node. " alt="" coords="272,772,447,813"/>
+<area shape="rect" id="node16" href="$classbulkmt_1_1common_1_1counter.html" title="The &quot;counter&quot; class. " alt="" coords="569,238,757,265"/>
+<area shape="rect" id="node19" title="STL class. " alt="" coords="586,603,741,630"/>
+<area shape="rect" id="node22" href="$classbulkmt_1_1io_1_1ireader.html" title="bulkmt::io::ireader" alt="" coords="930,657,1069,683"/>
+<area shape="rect" id="node23" href="$classbulkmt_1_1utils_1_1subject.html" title="bulkmt::utils::subject\l\&lt; std::string \&gt;" alt="" coords="586,655,741,696"/>
+<area shape="rect" id="node26" title="STL class. " alt="" coords="1311,639,1415,666"/>
+<area shape="rect" id="node27" title="STL class. " alt="" coords="927,708,1071,749"/>
+<area shape="rect" id="node28" title="STL class. " alt="" coords="579,721,747,747"/>
+<area shape="rect" id="node29" title="STL class. " alt="" coords="306,721,413,747"/>
+</map>

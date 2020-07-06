@@ -1,0 +1,9 @@
+<map id="src/core/controller.hpp" name="src/core/controller.hpp">
+<area shape="rect" id="node4" href="$cmdpool_8hpp.html" title="Discription of the class &quot;cmd_pool&quot;. " alt="" coords="55,155,222,181"/>
+<area shape="rect" id="node8" href="$counter_8hpp.html" title="Discription of the class &quot;counter&quot;. " alt="" coords="246,155,405,181"/>
+<area shape="rect" id="node9" href="$taskpool_8hpp.html" title="Task pool implementation. " alt="" coords="763,80,928,107"/>
+<area shape="rect" id="node17" href="$ireader_8hpp.html" title="Discription of the interface class &quot;IReader&quot;. " alt="" coords="236,80,345,107"/>
+<area shape="rect" id="node20" href="$observer_8hpp.html" title="Discription of the template class &quot;Observer&quot;. " alt="" coords="507,229,613,256"/>
+<area shape="rect" id="node15" href="$tsqueue_8hpp.html" title="Implementation of the class &quot;TSQueue&quot;. " alt="" coords="1063,155,1166,181"/>
+<area shape="rect" id="node18" href="$subject_8hpp.html" title="Discription of the template class &quot;Subject&quot;. " alt="" coords="429,155,555,181"/>
+</map>

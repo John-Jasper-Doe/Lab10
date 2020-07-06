@@ -1,0 +1,9 @@
+<map id="bulkmt::common::taskpool&lt; THREADS &gt;" name="bulkmt::common::taskpool&lt; THREADS &gt;">
+<area shape="rect" id="node2" href="$classbulkmt_1_1common_1_1tsqueue.html" title="bulkmt::common::tsqueue\l\&lt; task_t * \&gt;" alt="" coords="821,40,1012,81"/>
+<area shape="rect" id="node3" href="$structbulkmt_1_1common_1_1detail_1_1node.html" title="bulkmt::common::detail\l::node\&lt; task_t * \&gt;" alt="" coords="272,5,447,47"/>
+<area shape="rect" id="node5" href="$structbulkmt_1_1common_1_1detail_1_1node.html" title="Representation of a queue node. " alt="" coords="272,84,447,125"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="873,113,960,139"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="543,105,680,147"/>
+<area shape="rect" id="node10" href="$classbulkmt_1_1common_1_1counter.html" title="The &quot;counter&quot; class. " alt="" coords="517,171,705,198"/>
+<area shape="rect" id="node13" title="STL class. " alt="" coords="534,302,689,329"/>
+</map>
