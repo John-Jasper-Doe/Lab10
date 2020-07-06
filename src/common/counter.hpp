@@ -61,8 +61,8 @@ public:
   friend counter& operator+=(counter& lhs, const counter& rhs);
   friend counter& operator-=(counter& lhs, const counter& rhs);
 
-  friend counter& operator+(counter& lhs, const counter& rhs);
-  friend counter& operator-(counter& lhs, const counter& rhs);
+  friend counter operator+(counter& lhs, const counter& rhs);
+  friend counter operator-(counter& lhs, const counter& rhs);
 };
 
 inline counter& operator+=(counter& lhs, const counter& rhs) {
@@ -81,20 +81,24 @@ inline counter& operator-=(counter& lhs, const counter& rhs) {
   return lhs;
 }
 
-inline counter& operator+(counter& lhs, const counter& rhs) {
-  lhs.str_ = lhs.str_ + rhs.str_;
-  lhs.cmd_ = lhs.cmd_ + rhs.cmd_;
-  lhs.blk_ = lhs.blk_ + rhs.blk_;
+inline counter operator+(counter& lhs, const counter& rhs) {
+  counter res;
 
-  return lhs;
+  res.str_ = lhs.str_ + rhs.str_;
+  res.cmd_ = lhs.cmd_ + rhs.cmd_;
+  res.blk_ = lhs.blk_ + rhs.blk_;
+
+  return res;
 }
 
-inline counter& operator-(counter& lhs, const counter& rhs) {
-  lhs.str_ = lhs.str_ - rhs.str_;
-  lhs.cmd_ = lhs.cmd_ - rhs.cmd_;
-  lhs.blk_ = lhs.blk_ - rhs.blk_;
+inline counter operator-(counter& lhs, const counter& rhs) {
+  counter res;
 
-  return lhs;
+  res.str_ = lhs.str_ - rhs.str_;
+  res.cmd_ = lhs.cmd_ - rhs.cmd_;
+  res.blk_ = lhs.blk_ - rhs.blk_;
+
+  return res;
 }
 
 } /* common:: */
