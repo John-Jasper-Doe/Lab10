@@ -20,7 +20,7 @@ conlogger::conlogger(std::ostream& ostrm, const std::string& str,
 conlogger::~conlogger() noexcept {}
 
 common::counter conlogger::start() noexcept {
-  ostrm_ << str_ << '\n';
+  ostrm_ << str_ << '\n' << std::flush;
   return cnt_;
 }
 
