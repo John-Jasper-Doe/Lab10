@@ -17,13 +17,35 @@ namespace bulkmt {
 /** @brief The namespace of the Core */
 namespace core {
 
-controller::controller(std::size_t cmd_per_block) noexcept : commands_per_block_(cmd_per_block) {}
+controller::controller(std::size_t cmd_per_block, std::unique_ptr<io::ireader> reader,
+                       std::ostream& ostrm_stat, std::ostream& ostrm_log) noexcept
+  : commands_per_block_(cmd_per_block)
+  , pool_(std::make_unique<common::cmd_pool>())
+  , reader_(std::move(reader))
+  , ostrm_stat_(ostrm_stat)
+  , ostrm_log_(ostrm_log) {}
 
 controller::~controller() noexcept {
   if (pool_->size() > 0 && depth_ == 0)
     flush();
 
-  std::cout << "All stats: " << counter_.as_str(true) << std::endl;
+  console_pool_.stop();
+  file_pool_.stop();
+
+  ostrm_stat_ << "All stats: " << counter_.as_str(true) << std::endl;
+  ostrm_stat_ << console_pool_.count_as_str() << std::endl;
+  ostrm_stat_ << file_pool_.count_as_str() << std::endl;
+}
+
+void controller::start() {
+  console_pool_.start();
+  file_pool_.start();
+
+  auto this_ptr = shared_from_this();
+  std::weak_ptr<controller> weak_ptr(this_ptr);
+  reader_->attach(weak_ptr);
+  reader_->read_cycle();
+  reader_->detach(weak_ptr);
 }
 
 void controller::update(const std::string& str) {
@@ -66,11 +88,12 @@ void controller::flush() {
     std::string str = pool_->as_str();
     pool_->clear();
 
-    io::filelogger fl(str, pool_->first_cmd_time(), diff);
-    io::conlogger cl(std::cout, str, diff);
+    std::shared_ptr<io::filelogger> fl =
+        std::make_shared<io::filelogger>(str, pool_->first_cmd_time(), diff);
+    std::shared_ptr<io::conlogger> cl = std::make_shared<io::conlogger>(ostrm_log_, str, diff);
 
-    file_pool_.push([&fl]() { return fl.start(); });
-    console_pool_.push([&cl]() { return cl.start(); });
+    file_pool_.push([fl]() { return fl->start(); });
+    console_pool_.push([cl]() { return cl->start(); });
 
     prev_cnt_ = counter_;
   }

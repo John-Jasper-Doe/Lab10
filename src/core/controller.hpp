@@ -18,6 +18,7 @@
 #include "common/cmdpool.hpp"
 #include "common/counter.hpp"
 #include "common/taskpool.hpp"
+#include "io/ireader.hpp"
 #include "utils/observer.hpp"
 
 /** @brief The namespace of the BULKMT project */
@@ -41,17 +42,22 @@ class controller final : public utils::observer<std::string>,
   std::unique_ptr<common::cmd_pool> pool_;
 
   /** @brief Pool for outputting log to console. */
-  common::taskpool<1> console_pool_;
+  common::taskpool<1> console_pool_{"Console"};
 
   /** @brief Pool for outputting log to file. */
-  common::taskpool<4> file_pool_;
+  common::taskpool<4> file_pool_{"File"};
 
-  //  std::shared_ptr<jjd::reader> reader_;   /**< - the reader from console. */
+  /** @brief The reader from console. */
+  std::unique_ptr<io::ireader> reader_;
+
+  std::ostream& ostrm_stat_;
+  std::ostream& ostrm_log_;
 
 public:
   /** @brief The default constructor. */
-  controller() = default;
-  explicit controller(std::size_t cmd_per_block) noexcept;
+  controller() = delete;
+  explicit controller(std::size_t cmd_per_block, std::unique_ptr<io::ireader> reader,
+                      std::ostream& ostrm_stat, std::ostream& ostrm_log) noexcept;
 
   /** @brief The default distructor. */
   virtual ~controller() noexcept override;
