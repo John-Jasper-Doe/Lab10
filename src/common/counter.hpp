@@ -60,6 +60,9 @@ public:
 
   friend counter& operator+=(counter& lhs, const counter& rhs);
   friend counter& operator-=(counter& lhs, const counter& rhs);
+
+  friend counter& operator+(counter& lhs, const counter& rhs);
+  friend counter& operator-(counter& lhs, const counter& rhs);
 };
 
 inline counter& operator+=(counter& lhs, const counter& rhs) {
@@ -74,6 +77,22 @@ inline counter& operator-=(counter& lhs, const counter& rhs) {
   lhs.str_ -= rhs.str_;
   lhs.cmd_ -= rhs.cmd_;
   lhs.blk_ -= rhs.blk_;
+
+  return lhs;
+}
+
+inline counter& operator+(counter& lhs, const counter& rhs) {
+  lhs.str_ = lhs.str_ + rhs.str_;
+  lhs.cmd_ = lhs.cmd_ + rhs.cmd_;
+  lhs.blk_ = lhs.blk_ + rhs.blk_;
+
+  return lhs;
+}
+
+inline counter& operator-(counter& lhs, const counter& rhs) {
+  lhs.str_ = lhs.str_ - rhs.str_;
+  lhs.cmd_ = lhs.cmd_ - rhs.cmd_;
+  lhs.blk_ = lhs.blk_ - rhs.blk_;
 
   return lhs;
 }
