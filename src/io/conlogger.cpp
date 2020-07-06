@@ -17,6 +17,8 @@ conlogger::conlogger(std::ostream& ostrm, const std::string& str,
                      const common::counter& cnt) noexcept
   : ostrm_(ostrm), str_(std::move(str)), cnt_(cnt) {}
 
+conlogger::~conlogger() noexcept {}
+
 common::counter conlogger::start() noexcept {
   ostrm_ << str_ << '\n';
   return cnt_;

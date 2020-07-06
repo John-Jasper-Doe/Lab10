@@ -39,13 +39,13 @@ public:
                      const bulkmt::common::counter& cnt) noexcept;
 
   /** @brief The default distructor. */
-  virtual ~conlogger() = default;
+  virtual ~conlogger() noexcept override;
 
   /**
    * @brief start
    * @return Counter for accounting.
    */
-  virtual bulkmt::common::counter start() noexcept;
+  virtual bulkmt::common::counter start() noexcept override;
 };
 
 } /* io:: */

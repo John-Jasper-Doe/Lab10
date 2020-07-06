@@ -16,6 +16,8 @@ namespace io {
 
 reader::reader(std::istream& istrm) noexcept : istrm_{istrm} {}
 
+reader::~reader() noexcept {}
+
 void reader::read_cycle() {
   for (std::string tmp_str{""}; std::getline(istrm_, tmp_str);) {
     if (!tmp_str.empty())

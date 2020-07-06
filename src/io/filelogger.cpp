@@ -21,6 +21,8 @@ filelogger::filelogger(const std::string& str, time_point_t time_point,
                        const bulkmt::common::counter& cnt) noexcept
   : str_(std::move(str)), time_point_(time_point), cnt_(cnt) {}
 
+filelogger::~filelogger() noexcept {}
+
 common::counter filelogger::start() noexcept {
   std::stringstream file_name;
   file_name << std::to_string(time_point_.time_since_epoch().count()) << "_"

@@ -14,9 +14,9 @@ public:
                       const bulkmt::common::counter& cnt) noexcept
     : ostrm_(ostrm), str_(std::move(str)), cnt_(cnt) {}
 
-  ~test_loger() = default;
+  virtual ~test_loger() noexcept override {}
 
-  bulkmt::common::counter start() noexcept {
+  bulkmt::common::counter start() noexcept override {
     ostrm_ << str_ << '\n';
     return cnt_;
   }

@@ -34,8 +34,10 @@ public:
    */
   explicit reader(std::istream& istrm) noexcept;
 
+  virtual ~reader() noexcept override;
+
   /** @brief Loop to read data from the input stream. */
-  void read_cycle();
+  virtual void read_cycle() override;
 };
 
 } /* io:: */
