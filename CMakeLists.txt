@@ -32,7 +32,6 @@ include(function)
 
 project(${PROJECT_NAME} CXX)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
-find_package(Boost COMPONENTS program_options filesystem regex thread REQUIRED)
 
 # Setting options on project
 option(CLANG_FORMAT "Enable clang-format target" OFF)
