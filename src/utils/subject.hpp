@@ -58,7 +58,7 @@ public:
    * @brief Remove the observer.
    * @param [in] obs - pointer to the observer.
    */
-  void unfasten(observer_ptr_t obs) {
+  void detach(observer_ptr_t obs) {
     if (auto spt = obs.lock()) {
       auto weak_cmp = [&spt](const observer_ptr_t& o) { return spt == o.lock(); };
 
