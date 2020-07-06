@@ -30,6 +30,10 @@ namespace bulkmt {
 /** @brief The namespace of the Common */
 namespace common {
 
+/**
+ * @brief Class "Task Pool".
+ * @tparam [in] THREADS - Pool size, number of threads processing tasks.
+ */
 template <std::size_t THREADS = 1>
 class taskpool final {
   /** @brief Flag alias. */
@@ -132,13 +136,14 @@ public:
 
   /**
    * @brief Push
-   * @tparam U - Pointer to a function of the form: bulkmt::common::counter()
+   * @tparam [in] T - The type of task to add.
+   * @param [in] f - Pointer to a function of the form: bulkmt::common::counter()
    * @details
    * The function takes a pointer to a function of a given type. Wraps in
    * lambda and puts in line.
    */
-  template <typename U>
-  void push(U&& f) {
+  template <class T>
+  void push(T&& f) {
     auto func = new task_t([f]() { return std::move(f()); });
 
     tasks_.push(std::move(func));
