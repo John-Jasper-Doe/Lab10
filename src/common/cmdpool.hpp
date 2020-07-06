@@ -47,7 +47,7 @@ public:
 
   /**
    * @brief Adding a command to the pool.
-   * @param command [in] - the command.
+   * @param [in] cmd - the command.
    */
   void add(const cmd_t&& cmd);
 

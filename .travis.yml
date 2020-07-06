@@ -3,9 +3,7 @@ dist: xenial
 language: c++
 
 before_script:
-- sudo add-apt-repository ppa:mhier/libboost-latest -y
 - sudo apt-get update -q
-- sudo apt-get install libboost1.70-dev -y
 - sudo apt install doxygen -y
 - sudo apt install graphviz -y
 
@@ -16,7 +14,7 @@ script:
 - cmake --build . --target package
 
 env:
-  - TARGET=bayan
+  - TARGET=bulkmt
 
 deploy:
 - provider: pages

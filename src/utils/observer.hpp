@@ -1,5 +1,5 @@
 /**
- * @file obsorver.hpp
+ * @file observer.hpp
  *
  * @brief Discription of the template class "Observer".
  *
