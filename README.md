@@ -3,7 +3,6 @@
 [ ![Download](https://api.bintray.com/packages/john-jasper-doe/otus-cpp/homeworks/images/download.svg?version=bulkmt) ](https://bintray.com/john-jasper-doe/otus-cpp/homeworks/bulkmt/link)
 
 
-
 ## Otus Developer C++ Course
 Homework "BULKMT"
 
